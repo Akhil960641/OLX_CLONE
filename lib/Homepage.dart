@@ -13,7 +13,8 @@ class HomePage extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.greenAccent, actions: [
+      backgroundColor: Colors.grey[200],
+      appBar: AppBar(backgroundColor: Colors.yellow, actions: [
         FloatingActionButton(
           heroTag: null,
           onPressed: () {
@@ -47,7 +48,7 @@ class HomePage extends StatelessWidget {
                         itemCount: productList.length,
 
                         itemBuilder: (context, index) {
-                          return ViewList(
+                          return ProductList(
                             productName: productList[index]['product name'],
                             price: productList[index]['price'],
                             imageUrl: productList[index]['imageUrl'],

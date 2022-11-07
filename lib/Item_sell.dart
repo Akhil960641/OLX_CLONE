@@ -167,7 +167,7 @@ class _ItemSellState extends State<ItemSell> {
 
                     if (ProductName.text != '' && Price.text != '') {
                       var imageStorage = FirebaseStorage.instance.ref().child('images$ProductName.text');
-                      var uploadimage = imageStorage.putFile(imageFile!);
+                      var uploadimage = await imageStorage.putFile(imageFile!);
                       imageurl = await imageStorage.getDownloadURL();
                       print(imageurl);
 
