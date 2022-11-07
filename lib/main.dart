@@ -24,7 +24,9 @@ class MyApp extends StatelessWidget {
         if(snapshot.connectionState==ConnectionState.waiting){
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            home:  FlashScreen(),
+            home:  FlashScreen(
+
+            ),
           );
         }else{
           return MaterialApp(

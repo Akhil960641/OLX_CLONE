@@ -22,7 +22,7 @@ return Scaffold(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset('assets/Logo.png',color: Colors.white,height: 60,width: 50),
+            Image.asset('assets/Logo.png',color:Colors.white,height: 70,width: 50),
             SizedBox(height: 10,),
         AnimatedTextKit(
           animatedTexts: [

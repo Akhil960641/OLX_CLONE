@@ -153,6 +153,7 @@ class _ItemSellState extends State<ItemSell> {
                 width: size.width * .79,
                 color: Colors.grey.shade100,
                 child: TextFormField(
+                  keyboardType:TextInputType.number ,
                   controller: Price,
                   decoration: InputDecoration(
                       border:
