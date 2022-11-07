@@ -22,6 +22,7 @@ class _ItemSellState extends State<ItemSell> {
 
   File? imageFile;
   bool _uploading=false;
+  bool isClickable=true;
 
   @override
   Widget build(BuildContext context) {
@@ -162,8 +163,14 @@ class _ItemSellState extends State<ItemSell> {
                 ),
               ),
               SizedBox(height: size.height * .07),
-              InkWell(
+
+              isClickable==true?InkWell(
                   onTap: () async {
+
+
+                    setState(() {
+                      isClickable =false;
+                    });
 
                     if (ProductName.text != '' && Price.text != '') {
                       var imageStorage = FirebaseStorage.instance.ref().child('images$ProductName.text');
@@ -187,7 +194,13 @@ class _ItemSellState extends State<ItemSell> {
                         backgroundColor: Colors.grey,
                       ));
                     }
+
+
+                    setState(() {
+                      isClickable=true;
+                    });
                   },
+
                   child: Container(
                     width: size.width * .35,
                     height: size.width * .14,
@@ -208,7 +221,10 @@ class _ItemSellState extends State<ItemSell> {
                     child: Center(
                       child: Text('UPLOAD'),
                     ),
-                  )),
+                  )):CircularProgressIndicator(
+                color: Colors.red,
+
+              ),
 
                           ],
           ),

@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:olx_flutter/Flash_screen.dart';
 import 'package:olx_flutter/Login_page.dart';
 
@@ -11,6 +12,7 @@ void main() async{
 WidgetsFlutterBinding.ensureInitialized();
  // WidgetsFlutterBinding();
   await Firebase.initializeApp();
+  FlutterNativeSplash.preserve(widgetsBinding: WidgetsBinding.instance);
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
